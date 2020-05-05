@@ -9,12 +9,12 @@ package Interfaz;
  *
  * @author Jessica
  */
-public class Pregunta1 extends javax.swing.JPanel {
+public class Pregunta3 extends javax.swing.JPanel {
 
     /**
      * Creates new form Pregunta1
      */
-    public Pregunta1() {
+    public Pregunta3() {
         initComponents();
     }
 
@@ -38,11 +38,11 @@ public class Pregunta1 extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("1. ¿Qué edad tienes?");
+        jLabel6.setText("3.Tu trabajo te obliga a estar constantemente ");
 
         jRadioButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Menos de 45 años");
+        jRadioButton3.setText("Sentado");
         jRadioButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jRadioButton3.setOpaque(false);
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -53,19 +53,19 @@ public class Pregunta1 extends javax.swing.JPanel {
 
         jRadioButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton4.setText("Entre 46 y 55 años");
+        jRadioButton4.setText("De pie");
         jRadioButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jRadioButton4.setOpaque(false);
 
         jRadioButton5.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton5.setText("Entre 56 y 65 años");
+        jRadioButton5.setText("En movimiento");
         jRadioButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jRadioButton5.setOpaque(false);
 
         jRadioButton6.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton6.setText("Más de 66 años");
+        jRadioButton6.setText("En deporte");
         jRadioButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jRadioButton6.setOpaque(false);
         jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -84,15 +84,18 @@ public class Pregunta1 extends javax.swing.JPanel {
                     .addComponent(jRadioButton3)
                     .addComponent(jRadioButton4)
                     .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
+                    .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(343, 343, 343))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)

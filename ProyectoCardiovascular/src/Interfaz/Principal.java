@@ -10,10 +10,7 @@ package Interfaz;
  * @author wsinchi69
  */
 public class Principal extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Principal
-     */
+    Test tes=new Test();
     public Principal() {
         initComponents();
     }
@@ -133,7 +130,8 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        tes.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

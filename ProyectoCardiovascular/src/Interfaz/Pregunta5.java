@@ -9,12 +9,12 @@ package Interfaz;
  *
  * @author Jessica
  */
-public class Pregunta1 extends javax.swing.JPanel {
+public class Pregunta5 extends javax.swing.JPanel {
 
     /**
      * Creates new form Pregunta1
      */
-    public Pregunta1() {
+    public Pregunta5() {
         initComponents();
     }
 
@@ -32,17 +32,18 @@ public class Pregunta1 extends javax.swing.JPanel {
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(102, 0, 0));
 
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("1. ¿Qué edad tienes?");
+        jLabel6.setText("5.¿Existen casos de ictus (derrame cerebral)");
 
         jRadioButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Menos de 45 años");
+        jRadioButton3.setText("No");
         jRadioButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jRadioButton3.setOpaque(false);
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -53,19 +54,19 @@ public class Pregunta1 extends javax.swing.JPanel {
 
         jRadioButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton4.setText("Entre 46 y 55 años");
+        jRadioButton4.setText("Si, cuando tenía entre 56 y 70 años");
         jRadioButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jRadioButton4.setOpaque(false);
 
         jRadioButton5.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton5.setText("Entre 56 y 65 años");
+        jRadioButton5.setText("Si, cuando tenía entre 41 y 55 años");
         jRadioButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jRadioButton5.setOpaque(false);
 
         jRadioButton6.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton6.setText("Más de 66 años");
+        jRadioButton6.setText("Si, antes de los 41 años");
         jRadioButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jRadioButton6.setOpaque(false);
         jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -74,26 +75,40 @@ public class Pregunta1 extends javax.swing.JPanel {
             }
         });
 
+        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText(" en algún familiar cercano?");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(72, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 548, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton3)
+                            .addComponent(jRadioButton4)
+                            .addComponent(jRadioButton5)
+                            .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jRadioButton4)
@@ -101,7 +116,7 @@ public class Pregunta1 extends javax.swing.JPanel {
                 .addComponent(jRadioButton5)
                 .addGap(5, 5, 5)
                 .addComponent(jRadioButton6)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(18, 18, 18))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -116,6 +131,7 @@ public class Pregunta1 extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JRadioButton jRadioButton5;
