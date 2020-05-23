@@ -27,11 +27,12 @@ public class Pregunta16 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        g1p16 = new javax.swing.ButtonGroup();
         jLabel7 = new javax.swing.JLabel();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
+        p16rb1 = new javax.swing.JRadioButton();
+        p16rb2 = new javax.swing.JRadioButton();
+        p16rb3 = new javax.swing.JRadioButton();
+        p16rb4 = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(102, 0, 0));
         setPreferredSize(new java.awt.Dimension(630, 230));
@@ -41,37 +42,41 @@ public class Pregunta16 extends javax.swing.JPanel {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("16. ¿Te estresas cuando estas en tu lugar de trabajo?");
 
-        jRadioButton7.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton7.setText("No me estreso");
-        jRadioButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton7.setOpaque(false);
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+        g1p16.add(p16rb1);
+        p16rb1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p16rb1.setForeground(new java.awt.Color(255, 255, 255));
+        p16rb1.setText("No me estreso");
+        p16rb1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p16rb1.setOpaque(false);
+        p16rb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
+                p16rb1ActionPerformed(evt);
             }
         });
 
-        jRadioButton8.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton8.setText("Cuando estoy sometido a presiones");
-        jRadioButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton8.setOpaque(false);
+        g1p16.add(p16rb2);
+        p16rb2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p16rb2.setForeground(new java.awt.Color(255, 255, 255));
+        p16rb2.setText("Cuando estoy sometido a presiones");
+        p16rb2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p16rb2.setOpaque(false);
 
-        jRadioButton9.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton9.setText("Con frecuencia");
-        jRadioButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton9.setOpaque(false);
+        g1p16.add(p16rb3);
+        p16rb3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p16rb3.setForeground(new java.awt.Color(255, 255, 255));
+        p16rb3.setText("Con frecuencia");
+        p16rb3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p16rb3.setOpaque(false);
 
-        jRadioButton10.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton10.setText("Me estreso continuamente");
-        jRadioButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton10.setOpaque(false);
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+        g1p16.add(p16rb4);
+        p16rb4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p16rb4.setForeground(new java.awt.Color(255, 255, 255));
+        p16rb4.setText("Me estreso continuamente");
+        p16rb4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p16rb4.setOpaque(false);
+        p16rb4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
+                p16rb4ActionPerformed(evt);
             }
         });
 
@@ -80,17 +85,14 @@ public class Pregunta16 extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addGap(110, 110, 110)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton7)
-                            .addComponent(jRadioButton8)
-                            .addComponent(jRadioButton9)
-                            .addComponent(jRadioButton10))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(p16rb1)
+                    .addComponent(p16rb2)
+                    .addComponent(p16rb3)
+                    .addComponent(p16rb4))
+                .addContainerGap(213, Short.MAX_VALUE))
+            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,31 +100,32 @@ public class Pregunta16 extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p16rb1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(jRadioButton8)
+                .addComponent(p16rb2)
                 .addGap(5, 5, 5)
-                .addComponent(jRadioButton9)
+                .addComponent(p16rb3)
                 .addGap(5, 5, 5)
-                .addComponent(jRadioButton10)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addComponent(p16rb4)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+    private void p16rb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p16rb1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
+    }//GEN-LAST:event_p16rb1ActionPerformed
 
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+    private void p16rb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p16rb4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
+    }//GEN-LAST:event_p16rb4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup g1p16;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
+    public javax.swing.JRadioButton p16rb1;
+    public javax.swing.JRadioButton p16rb2;
+    public javax.swing.JRadioButton p16rb3;
+    public javax.swing.JRadioButton p16rb4;
     // End of variables declaration//GEN-END:variables
 }

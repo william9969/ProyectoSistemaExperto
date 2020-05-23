@@ -28,11 +28,12 @@ public class Pregunta2 extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        g1p2 = new javax.swing.ButtonGroup();
         jLabel7 = new javax.swing.JLabel();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
+        p2rb1 = new javax.swing.JRadioButton();
+        p2rb2 = new javax.swing.JRadioButton();
+        p2rb3 = new javax.swing.JRadioButton();
+        p2rb4 = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(102, 0, 0));
         setLayout(new java.awt.GridBagLayout());
@@ -51,14 +52,15 @@ public class Pregunta2 extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(27, 57, 0, 42);
         add(jLabel7, gridBagConstraints);
 
-        jRadioButton7.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton7.setText("Menos de 70 cm");
-        jRadioButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton7.setOpaque(false);
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+        g1p2.add(p2rb1);
+        p2rb1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p2rb1.setForeground(new java.awt.Color(255, 255, 255));
+        p2rb1.setText("Menos de 70 cm");
+        p2rb1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p2rb1.setOpaque(false);
+        p2rb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
+                p2rb1ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -67,42 +69,45 @@ public class Pregunta2 extends javax.swing.JPanel {
         gridBagConstraints.ipady = -9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 110, 0, 0);
-        add(jRadioButton7, gridBagConstraints);
+        add(p2rb1, gridBagConstraints);
 
-        jRadioButton8.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton8.setText("Entre 71 y 80 cm");
-        jRadioButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton8.setOpaque(false);
+        g1p2.add(p2rb2);
+        p2rb2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p2rb2.setForeground(new java.awt.Color(255, 255, 255));
+        p2rb2.setText("Entre 71 y 80 cm");
+        p2rb2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p2rb2.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 110, 0, 0);
-        add(jRadioButton8, gridBagConstraints);
+        add(p2rb2, gridBagConstraints);
 
-        jRadioButton9.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton9.setText("Entre 80 y 90 cm");
-        jRadioButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton9.setOpaque(false);
+        g1p2.add(p2rb3);
+        p2rb3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p2rb3.setForeground(new java.awt.Color(255, 255, 255));
+        p2rb3.setText("Entre 80 y 90 cm");
+        p2rb3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p2rb3.setOpaque(false);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(5, 110, 0, 0);
-        add(jRadioButton9, gridBagConstraints);
+        add(p2rb3, gridBagConstraints);
 
-        jRadioButton10.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton10.setText("Mas de 90 cm");
-        jRadioButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton10.setOpaque(false);
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+        g1p2.add(p2rb4);
+        p2rb4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p2rb4.setForeground(new java.awt.Color(255, 255, 255));
+        p2rb4.setText("Mas de 90 cm");
+        p2rb4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p2rb4.setOpaque(false);
+        p2rb4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
+                p2rb4ActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -112,23 +117,24 @@ public class Pregunta2 extends javax.swing.JPanel {
         gridBagConstraints.ipadx = 82;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(5, 110, 28, 0);
-        add(jRadioButton10, gridBagConstraints);
+        add(p2rb4, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+    private void p2rb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2rb1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
+    }//GEN-LAST:event_p2rb1ActionPerformed
 
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+    private void p2rb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2rb4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
+    }//GEN-LAST:event_p2rb4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup g1p2;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
+    public javax.swing.JRadioButton p2rb1;
+    public javax.swing.JRadioButton p2rb2;
+    public javax.swing.JRadioButton p2rb3;
+    public javax.swing.JRadioButton p2rb4;
     // End of variables declaration//GEN-END:variables
 }

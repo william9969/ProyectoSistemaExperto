@@ -15,6 +15,7 @@ import javax.swing.*;
  */
 public class Test extends javax.swing.JFrame implements ActionListener{
     //this.Test = Test();
+    public int cont=1;
     private final Pregunta1 pre1;
     private final Pregunta2 pre2;
     private final Pregunta3 pre3;
@@ -41,12 +42,8 @@ public class Test extends javax.swing.JFrame implements ActionListener{
     private final Pregunta24 pre24;
     private final Pregunta25 pre25;
 
-    /**
-     * Creates new form Test
-     */
     public Test() {
         initComponents();
-    
         /*Inicialimos los JPanel que heredan del JPanel Contenedor*/
         pre1 = new Pregunta1();
         pre2 = new Pregunta2();
@@ -119,15 +116,13 @@ public class Test extends javax.swing.JFrame implements ActionListener{
     }
 
     private void deshabilitarBtn(){
-        if (pre1.isVisible()){
-            btnant.setEnabled(false);
-            btnsig.setEnabled(true);
-        }else if (pre25.isVisible()){
+        if (pre25.isVisible()){
             btnant.setEnabled(true);
+            btnant.setVisible(true);
             btnsig.setEnabled(false);
         }else{
-            btnant.setEnabled(true);
-            btnsig.setEnabled(true);
+            btnant.setEnabled(false);
+            btnant.setVisible(false);
         }
     }
     /**
@@ -815,25 +810,26 @@ public class Test extends javax.swing.JFrame implements ActionListener{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        txtpes = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        rbMujer = new javax.swing.JRadioButton();
+        rbHombre = new javax.swing.JRadioButton();
         txtnom = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtape = new javax.swing.JTextField();
         contenedor = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        btnant = new javax.swing.JButton();
         btnsig = new javax.swing.JButton();
+        btnant = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
 
-        jPanel1.setBackground(new java.awt.Color(102, 0, 0));
+        txtpes.setBackground(new java.awt.Color(102, 0, 0));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -843,13 +839,15 @@ public class Test extends javax.swing.JFrame implements ActionListener{
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Genero:");
 
-        jRadioButton1.setBackground(new java.awt.Color(102, 0, 0));
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("Mujer");
+        rbMujer.setBackground(new java.awt.Color(102, 0, 0));
+        buttonGroup1.add(rbMujer);
+        rbMujer.setForeground(new java.awt.Color(255, 255, 255));
+        rbMujer.setText("Mujer");
 
-        jRadioButton2.setBackground(new java.awt.Color(102, 0, 0));
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Hombre");
+        rbHombre.setBackground(new java.awt.Color(102, 0, 0));
+        buttonGroup1.add(rbHombre);
+        rbHombre.setForeground(new java.awt.Color(255, 255, 255));
+        rbHombre.setText("Hombre");
 
         txtnom.setText("   ");
 
@@ -861,13 +859,13 @@ public class Test extends javax.swing.JFrame implements ActionListener{
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Apellido:");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout txtpesLayout = new javax.swing.GroupLayout(txtpes);
+        txtpes.setLayout(txtpesLayout);
+        txtpesLayout.setHorizontalGroup(
+            txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(txtpesLayout.createSequentialGroup()
+                .addGroup(txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(txtpesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -875,39 +873,39 @@ public class Test extends javax.swing.JFrame implements ActionListener{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(txtape, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, txtpesLayout.createSequentialGroup()
                         .addGap(187, 187, 187)
                         .addComponent(jLabel3)
                         .addGap(50, 50, 50)
-                        .addComponent(jRadioButton1)
+                        .addComponent(rbMujer)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton2)))
+                        .addComponent(rbHombre)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        txtpesLayout.setVerticalGroup(
+            txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(txtpesLayout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel1)
                         .addComponent(txtnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtape, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(rbMujer)
+                    .addComponent(rbHombre))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -916,17 +914,7 @@ public class Test extends javax.swing.JFrame implements ActionListener{
         contenedor.setLayout(new java.awt.GridBagLayout());
 
         jPanel3.setBackground(new java.awt.Color(102, 0, 0));
-
-        btnant.setBackground(new java.awt.Color(102, 0, 0));
-        btnant.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
-        btnant.setForeground(new java.awt.Color(255, 255, 255));
-        btnant.setText("Anterior");
-        btnant.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnantActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnant);
+        jPanel3.setLayout(null);
 
         btnsig.setBackground(new java.awt.Color(102, 0, 0));
         btnsig.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
@@ -938,21 +926,34 @@ public class Test extends javax.swing.JFrame implements ActionListener{
             }
         });
         jPanel3.add(btnsig);
+        btnsig.setBounds(260, 10, 93, 27);
+
+        btnant.setBackground(new java.awt.Color(102, 0, 0));
+        btnant.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        btnant.setForeground(new java.awt.Color(255, 255, 255));
+        btnant.setText("Finalizar");
+        btnant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnantActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnant);
+        btnant.setBounds(510, 10, 85, 27);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(txtpes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtpes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contenedor, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
+                .addComponent(contenedor, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -961,14 +962,147 @@ public class Test extends javax.swing.JFrame implements ActionListener{
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsigActionPerformed
-        // TODO add your handling code here:
-        // pre1.setVisible(true);
+        System.out.println("Pregunta"+cont);
+        cont++;
     }//GEN-LAST:event_btnsigActionPerformed
 
     private void btnantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnantActionPerformed
-        // TODO add your handling code here:
+        resultado();
     }//GEN-LAST:event_btnantActionPerformed
 
+    
+    private void resultado(){
+        if (pre1.p1rb1.isSelected()){System.out.println("A");}
+        else if (pre1.p1rb2.isSelected()){System.out.println("B");}
+        else if (pre1.p1rb3.isSelected()){System.out.println("C");}
+        else if (pre1.p1rb4.isSelected()){System.out.println("D");}
+        
+        if (pre2.p2rb1.isSelected()){System.out.println("A");}
+        else if (pre2.p2rb2.isSelected()){System.out.println("B");}
+        else if (pre2.p2rb3.isSelected()){System.out.println("C");}
+        else if (pre2.p2rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre3.p3rb1.isSelected()){System.out.println("A");}
+        else if (pre3.p3rb2.isSelected()){System.out.println("B");}
+        else if (pre3.p3rb3.isSelected()){System.out.println("C");}
+        else if (pre3.p3rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre4.p4rb1.isSelected()){System.out.println("A");}
+        else if (pre4.p4rb2.isSelected()){System.out.println("B");}
+        else if (pre4.p4rb3.isSelected()){System.out.println("C");}
+        else if (pre4.p4rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre5.p5rb1.isSelected()){System.out.println("A");}
+        else if (pre5.p5rb2.isSelected()){System.out.println("B");}
+        else if (pre5.p5rb3.isSelected()){System.out.println("C");}
+        else if (pre5.p5rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre6.p6rb1.isSelected()){System.out.println("A");}
+        else if (pre6.p6rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre7.p7rb1.isSelected()){System.out.println("A");}
+        else if (pre7.p7rb2.isSelected()){System.out.println("B");}
+        else if (pre7.p7rb3.isSelected()){System.out.println("C");}
+        else if (pre7.p7rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre8.p8rb1.isSelected()){System.out.println("A");}
+        else if (pre8.p8rb2.isSelected()){System.out.println("B");}
+        else if (pre8.p8rb3.isSelected()){System.out.println("C");}
+        else if (pre8.p8rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre9.p9rb1.isSelected()){System.out.println("A");}
+        else if (pre9.p9rb2.isSelected()){System.out.println("B");}
+        else if (pre9.p9rb3.isSelected()){System.out.println("C");}
+        else if (pre9.p9rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre10.p10rb1.isSelected()){System.out.println("A");}
+        else if (pre10.p10rb2.isSelected()){System.out.println("B");}
+        else if (pre10.p10rb3.isSelected()){System.out.println("C");}
+        else if (pre10.p10rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre11.p11rb1.isSelected()){System.out.println("A");}
+        else if (pre11.p11rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre12.p12rb1.isSelected()){System.out.println("A");}
+        else if (pre12.p12rb2.isSelected()){System.out.println("B");}
+        else if (pre12.p12rb3.isSelected()){System.out.println("C");}
+        else if (pre12.p12rb4.isSelected()){System.out.println("D");}
+        
+        
+        if (pre13.p13rb1.isSelected()){System.out.println("A");}
+        else if (pre13.p13rb2.isSelected()){System.out.println("B");}
+        else if (pre13.p13rb3.isSelected()){System.out.println("C");}
+        else if (pre13.p13rb4.isSelected()){System.out.println("D");}
+        
+        if (pre14.p14rb1.isSelected()){System.out.println("A");}
+        else if (pre14.p14rb2.isSelected()){System.out.println("B");}
+        else if (pre14.p14rb3.isSelected()){System.out.println("C");}
+        else if (pre14.p14rb4.isSelected()){System.out.println("D");}
+        
+        if (pre15.p15rb1.isSelected()){System.out.println("A");}
+        else if (pre15.p15rb2.isSelected()){System.out.println("B");}
+        else if (pre15.p15rb3.isSelected()){System.out.println("C");}
+        else if (pre15.p15rb4.isSelected()){System.out.println("D");}
+        
+        if (pre16.p16rb1.isSelected()){System.out.println("A");}
+        else if (pre16.p16rb2.isSelected()){System.out.println("B");}
+        else if (pre16.p16rb3.isSelected()){System.out.println("C");}
+        else if (pre16.p16rb4.isSelected()){System.out.println("D");}
+        
+        if (pre17.p17rb1.isSelected()){System.out.println("A");}
+        else if (pre17.p17rb2.isSelected()){System.out.println("B");}
+        else if (pre17.p17rb3.isSelected()){System.out.println("C");}
+        else if (pre17.p17rb4.isSelected()){System.out.println("D");}
+        
+        if (pre18.p18rb1.isSelected()){System.out.println("A");}
+        else if (pre18.p18rb2.isSelected()){System.out.println("B");}
+        else if (pre18.p18rb3.isSelected()){System.out.println("C");}
+        else if (pre18.p18rb4.isSelected()){System.out.println("D");}
+        
+        if (pre19.p19rb1.isSelected()){System.out.println("A");}
+        else if (pre19.p19rb2.isSelected()){System.out.println("B");}
+        else if (pre19.p19rb3.isSelected()){System.out.println("C");}
+        
+        if (pre20.p20rb1.isSelected()){System.out.println("A");}
+        else if (pre20.p20rb2.isSelected()){System.out.println("B");}
+        else if (pre20.p20rb3.isSelected()){System.out.println("C");}
+        else if (pre20.p20rb4.isSelected()){System.out.println("D");}
+        
+        if (pre21.p21rb1.isSelected()){System.out.println("A");}
+        else if (pre21.p21rb2.isSelected()){System.out.println("B");}
+        else if (pre21.p21rb3.isSelected()){System.out.println("C");}
+        else if (pre21.p21rb4.isSelected()){System.out.println("D");}
+        
+        if (pre22.p22rb1.isSelected()){System.out.println("A");}
+        else if (pre22.p22rb2.isSelected()){System.out.println("B");}
+        else if (pre22.p22rb3.isSelected()){System.out.println("C");}
+        else if (pre22.p22rb4.isSelected()){System.out.println("D");}
+        
+        if (pre23.p23rb1.isSelected()){System.out.println("A");}
+        else if (pre23.p23rb2.isSelected()){System.out.println("B");}
+        else if (pre23.p23rb3.isSelected()){System.out.println("C");}
+        
+        if (pre24.p24rb1.isSelected()){System.out.println("A");}
+        else if (pre24.p24rb2.isSelected()){System.out.println("B");}
+        else if (pre24.p24rb3.isSelected()){System.out.println("C");}
+        
+        if (pre25.p25rb1.isSelected()){System.out.println("A");}
+        else if (pre25.p25rb2.isSelected()){System.out.println("B");}
+        else if (pre25.p25rb3.isSelected()){System.out.println("C");}
+        else if (pre25.p25rb4.isSelected()){System.out.println("D");}
+        
+       
+    } 
     /**
      * @param args the command line arguments
      */
@@ -1007,18 +1141,19 @@ public class Test extends javax.swing.JFrame implements ActionListener{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnant;
     private javax.swing.JButton btnsig;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JPanel contenedor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JRadioButton rbHombre;
+    private javax.swing.JRadioButton rbMujer;
+    private javax.swing.JTextField txtape;
     private javax.swing.JTextField txtnom;
+    private javax.swing.JPanel txtpes;
     // End of variables declaration//GEN-END:variables
 
     @Override

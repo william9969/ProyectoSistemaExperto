@@ -27,11 +27,12 @@ public class Pregunta5 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        g1p5 = new javax.swing.ButtonGroup();
         jLabel6 = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        p5rb1 = new javax.swing.JRadioButton();
+        p5rb2 = new javax.swing.JRadioButton();
+        p5rb3 = new javax.swing.JRadioButton();
+        p5rb4 = new javax.swing.JRadioButton();
         jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(102, 0, 0));
@@ -41,37 +42,41 @@ public class Pregunta5 extends javax.swing.JPanel {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("5.¿Existen casos de ictus (derrame cerebral)");
 
-        jRadioButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("No");
-        jRadioButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton3.setOpaque(false);
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        g1p5.add(p5rb1);
+        p5rb1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p5rb1.setForeground(new java.awt.Color(255, 255, 255));
+        p5rb1.setText("No");
+        p5rb1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p5rb1.setOpaque(false);
+        p5rb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                p5rb1ActionPerformed(evt);
             }
         });
 
-        jRadioButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton4.setText("Si, cuando tenía entre 56 y 70 años");
-        jRadioButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton4.setOpaque(false);
+        g1p5.add(p5rb2);
+        p5rb2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p5rb2.setForeground(new java.awt.Color(255, 255, 255));
+        p5rb2.setText("Si, cuando tenía entre 56 y 70 años");
+        p5rb2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p5rb2.setOpaque(false);
 
-        jRadioButton5.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton5.setText("Si, cuando tenía entre 41 y 55 años");
-        jRadioButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton5.setOpaque(false);
+        g1p5.add(p5rb3);
+        p5rb3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p5rb3.setForeground(new java.awt.Color(255, 255, 255));
+        p5rb3.setText("Si, cuando tenía entre 41 y 55 años");
+        p5rb3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p5rb3.setOpaque(false);
 
-        jRadioButton6.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton6.setText("Si, antes de los 41 años");
-        jRadioButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton6.setOpaque(false);
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        g1p5.add(p5rb4);
+        p5rb4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p5rb4.setForeground(new java.awt.Color(255, 255, 255));
+        p5rb4.setText("Si, antes de los 41 años");
+        p5rb4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p5rb4.setOpaque(false);
+        p5rb4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                p5rb4ActionPerformed(evt);
             }
         });
 
@@ -95,10 +100,10 @@ public class Pregunta5 extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton5)
-                            .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(p5rb1)
+                            .addComponent(p5rb2)
+                            .addComponent(p5rb3)
+                            .addComponent(p5rb4, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -109,32 +114,33 @@ public class Pregunta5 extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p5rb1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(jRadioButton4)
+                .addComponent(p5rb2)
                 .addGap(5, 5, 5)
-                .addComponent(jRadioButton5)
+                .addComponent(p5rb3)
                 .addGap(5, 5, 5)
-                .addComponent(jRadioButton6)
+                .addComponent(p5rb4)
                 .addGap(18, 18, 18))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void p5rb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p5rb1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_p5rb1ActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void p5rb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p5rb4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_p5rb4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup g1p5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
+    public javax.swing.JRadioButton p5rb1;
+    public javax.swing.JRadioButton p5rb2;
+    public javax.swing.JRadioButton p5rb3;
+    public javax.swing.JRadioButton p5rb4;
     // End of variables declaration//GEN-END:variables
 }

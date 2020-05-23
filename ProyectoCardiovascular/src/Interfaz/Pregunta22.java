@@ -27,11 +27,12 @@ public class Pregunta22 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        g1p22 = new javax.swing.ButtonGroup();
         jLabel7 = new javax.swing.JLabel();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
+        p22rb1 = new javax.swing.JRadioButton();
+        p22rb2 = new javax.swing.JRadioButton();
+        p22rb3 = new javax.swing.JRadioButton();
+        p22rb4 = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(102, 0, 0));
         setPreferredSize(new java.awt.Dimension(630, 230));
@@ -41,37 +42,41 @@ public class Pregunta22 extends javax.swing.JPanel {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("22. ¿Cómo es tu alimentación fuera de casa?");
 
-        jRadioButton7.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton7.setText("Alimentos bajos en grasas");
-        jRadioButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton7.setOpaque(false);
-        jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
+        g1p22.add(p22rb1);
+        p22rb1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p22rb1.setForeground(new java.awt.Color(255, 255, 255));
+        p22rb1.setText("Alimentos bajos en grasas");
+        p22rb1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p22rb1.setOpaque(false);
+        p22rb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton7ActionPerformed(evt);
+                p22rb1ActionPerformed(evt);
             }
         });
 
-        jRadioButton8.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton8.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton8.setText("De vez en cuando como alimentos altos en grasas");
-        jRadioButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton8.setOpaque(false);
+        g1p22.add(p22rb2);
+        p22rb2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p22rb2.setForeground(new java.awt.Color(255, 255, 255));
+        p22rb2.setText("De vez en cuando como alimentos altos en grasas");
+        p22rb2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p22rb2.setOpaque(false);
 
-        jRadioButton9.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton9.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton9.setText("La mayor parte consumo alimentos altos en grasas");
-        jRadioButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton9.setOpaque(false);
+        g1p22.add(p22rb3);
+        p22rb3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p22rb3.setForeground(new java.awt.Color(255, 255, 255));
+        p22rb3.setText("La mayor parte consumo alimentos altos en grasas");
+        p22rb3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p22rb3.setOpaque(false);
 
-        jRadioButton10.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton10.setText("Siempre consumo alimentos altos en grasas");
-        jRadioButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton10.setOpaque(false);
-        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+        g1p22.add(p22rb4);
+        p22rb4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p22rb4.setForeground(new java.awt.Color(255, 255, 255));
+        p22rb4.setText("Siempre consumo alimentos altos en grasas");
+        p22rb4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p22rb4.setOpaque(false);
+        p22rb4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton10ActionPerformed(evt);
+                p22rb4ActionPerformed(evt);
             }
         });
 
@@ -86,11 +91,11 @@ public class Pregunta22 extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(53, 53, 53)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton7)
-                            .addComponent(jRadioButton8)
-                            .addComponent(jRadioButton9)
-                            .addComponent(jRadioButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(p22rb1)
+                            .addComponent(p22rb2)
+                            .addComponent(p22rb3)
+                            .addComponent(p22rb4, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,31 +103,32 @@ public class Pregunta22 extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jRadioButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(p22rb1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(jRadioButton8)
+                .addComponent(p22rb2)
                 .addGap(5, 5, 5)
-                .addComponent(jRadioButton9)
+                .addComponent(p22rb3)
                 .addGap(5, 5, 5)
-                .addComponent(jRadioButton10)
+                .addComponent(p22rb4)
                 .addContainerGap(98, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton7ActionPerformed
+    private void p22rb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p22rb1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton7ActionPerformed
+    }//GEN-LAST:event_p22rb1ActionPerformed
 
-    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+    private void p22rb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p22rb4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton10ActionPerformed
+    }//GEN-LAST:event_p22rb4ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup g1p22;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
+    public javax.swing.JRadioButton p22rb1;
+    public javax.swing.JRadioButton p22rb2;
+    public javax.swing.JRadioButton p22rb3;
+    public javax.swing.JRadioButton p22rb4;
     // End of variables declaration//GEN-END:variables
 }

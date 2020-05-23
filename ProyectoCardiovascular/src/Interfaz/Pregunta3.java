@@ -26,109 +26,95 @@ public class Pregunta3 extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
+        g1p3 = new javax.swing.ButtonGroup();
         jLabel6 = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        p3rb1 = new javax.swing.JRadioButton();
+        p3rb2 = new javax.swing.JRadioButton();
+        p3rb3 = new javax.swing.JRadioButton();
+        p3rb4 = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(102, 0, 0));
-        setLayout(new java.awt.GridBagLayout());
+        setLayout(null);
 
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("3.Tu trabajo te obliga a estar constantemente ");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 5;
-        gridBagConstraints.ipadx = 96;
-        gridBagConstraints.ipady = 12;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(21, 12, 0, 12);
-        add(jLabel6, gridBagConstraints);
+        add(jLabel6);
+        jLabel6.setBounds(30, 20, 520, 41);
 
-        jRadioButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Sentado");
-        jRadioButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton3.setOpaque(false);
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        g1p3.add(p3rb1);
+        p3rb1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p3rb1.setForeground(new java.awt.Color(255, 255, 255));
+        p3rb1.setText("Sentado");
+        p3rb1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p3rb1.setOpaque(false);
+        p3rb1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                p3rb1ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipady = -9;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 72, 0, 0);
-        add(jRadioButton3, gridBagConstraints);
+        add(p3rb1);
+        p3rb1.setBounds(70, 90, 91, 29);
 
-        jRadioButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton4.setText("De pie");
-        jRadioButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton4.setOpaque(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(10, 72, 0, 0);
-        add(jRadioButton4, gridBagConstraints);
+        g1p3.add(p3rb2);
+        p3rb2.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p3rb2.setForeground(new java.awt.Color(255, 255, 255));
+        p3rb2.setText("De pie");
+        p3rb2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p3rb2.setOpaque(false);
+        add(p3rb2);
+        p3rb2.setBounds(70, 120, 77, 29);
 
-        jRadioButton5.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton5.setText("En movimiento");
-        jRadioButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton5.setOpaque(false);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(5, 72, 0, 0);
-        add(jRadioButton5, gridBagConstraints);
-
-        jRadioButton6.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
-        jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton6.setText("En deporte");
-        jRadioButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jRadioButton6.setOpaque(false);
-        jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
+        g1p3.add(p3rb3);
+        p3rb3.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p3rb3.setForeground(new java.awt.Color(255, 255, 255));
+        p3rb3.setText("En movimiento");
+        p3rb3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p3rb3.setOpaque(false);
+        p3rb3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton6ActionPerformed(evt);
+                p3rb3ActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.ipadx = 98;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(5, 72, 23, 0);
-        add(jRadioButton6, gridBagConstraints);
+        add(p3rb3);
+        p3rb3.setBounds(70, 150, 145, 29);
+
+        g1p3.add(p3rb4);
+        p3rb4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        p3rb4.setForeground(new java.awt.Color(255, 255, 255));
+        p3rb4.setText("En deporte");
+        p3rb4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        p3rb4.setOpaque(false);
+        p3rb4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                p3rb4ActionPerformed(evt);
+            }
+        });
+        add(p3rb4);
+        p3rb4.setBounds(70, 180, 115, 29);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void p3rb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p3rb1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_p3rb1ActionPerformed
 
-    private void jRadioButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton6ActionPerformed
+    private void p3rb4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p3rb4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton6ActionPerformed
+    }//GEN-LAST:event_p3rb4ActionPerformed
+
+    private void p3rb3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p3rb3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_p3rb3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup g1p3;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
+    public javax.swing.JRadioButton p3rb1;
+    public javax.swing.JRadioButton p3rb2;
+    public javax.swing.JRadioButton p3rb3;
+    public javax.swing.JRadioButton p3rb4;
     // End of variables declaration//GEN-END:variables
 }
