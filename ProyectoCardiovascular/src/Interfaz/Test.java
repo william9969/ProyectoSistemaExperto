@@ -772,7 +772,7 @@ public class Test extends javax.swing.JFrame implements ActionListener{
             pre22.setVisible(false);
         }
         else if (pre25.isVisible()){
-            pre24.setVisible(true);
+            pre24.setVisible(false);
             pre25.setVisible(false);
             pre23.setVisible(false);
             pre1.setVisible(false);
@@ -962,8 +962,7 @@ public class Test extends javax.swing.JFrame implements ActionListener{
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsigActionPerformed
-        System.out.println("Pregunta"+cont);
-        cont++;
+     
     }//GEN-LAST:event_btnsigActionPerformed
 
     private void btnantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnantActionPerformed
@@ -1160,11 +1159,7 @@ public class Test extends javax.swing.JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object evt = e.getSource();
         
-        if (evt.equals(btnant)){
-            changeJPanel(1); //identificar con un numero cada que se aplasta el boton anterior   
-            deshabilitarBtn();
-        }
-        else if (evt.equals(btnsig)){
+        if (evt.equals(btnsig)){
             changeJPanel(2); //identificar con un numero cada que se aplasta el boton siguiente   
             deshabilitarBtn();
         }
