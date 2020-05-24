@@ -27,7 +27,9 @@ public class ControladorGeneral {
     public ControladorGeneral (){
        
     }
-    
+    /**
+     * Metodo para conectar con la base de conocimiento
+     */
     public void conexionClips (){
         //environment = new net.sf.clipsrules.jni.Environment();
         environment = new net.sf.clipsrules.jni.Environment();
