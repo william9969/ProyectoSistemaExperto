@@ -4,13 +4,14 @@
  * and open the template in the editor.
  */
 package Interfaz;
-
+import Controlador.ControladorGeneral;
 /**
  *
  * @author wsinchi69
  */
 public class Principal extends javax.swing.JFrame {
     Test tes=new Test();
+    ControladorGeneral con = new ControladorGeneral();
     public Principal() {
         initComponents();
     }
@@ -135,6 +136,7 @@ public class Principal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
         tes.setVisible(true);
+        con.conexionClips();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
