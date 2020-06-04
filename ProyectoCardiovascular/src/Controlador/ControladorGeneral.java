@@ -11,8 +11,16 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 import net.sf.clipsrules.jni.*;
 import Interfaz.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import Interfaz.*;
 /**
  *
  * @author Jessica
@@ -45,7 +53,13 @@ public class ControladorGeneral {
     public Pregunta23 pre23;
     public Pregunta24 pre24;
     public Pregunta25 pre25;
-    
+    String nombre;
+    String apellido;
+    float peso;
+    int resultadoA, resultadoB,resultadoC, resultadoD;
+    String genero;
+    String cardioVascular;
+    String mostrar;
     private net.sf.clipsrules.jni.Environment environment;
     
     
@@ -63,15 +77,25 @@ public class ControladorGeneral {
         this.pre1=preg1;this.pre2=preg2;this.pre3=preg3;this.pre4=preg4;this.pre5=preg5;this.pre6=preg6;this.pre7=preg7;this.pre8=preg8;this.pre9=preg9;this.pre10=preg10;
         this.pre11=preg11;this.pre12=preg12;this.pre13=preg13;this.pre14=preg14;this.pre15=preg15;this.pre16=preg16;this.pre17=preg17;this.pre18=preg18;this.pre19=preg19;this.pre20=preg20;
         this.pre21=preg21;this.pre22=preg22;this.pre23=preg23;this.pre24=preg24;this.pre25=preg25;
-        
-        conexionClips (nombre,apellido,peso,genero);
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.peso=peso;
+        this.genero=genero;
+       // nombre,apellido,peso,genero
+       // String nombre,String apellido,float peso,String genero
+        conexionClips();
     }
     /**
      * Metodo para conectar con la base de conocimiento
      */
-    public void conexionClips (String nombre,String apellido,float peso,String genero){
+    public void conexionClips (){
             
         //environment = new net.sf.clipsrules.jni.Environment();
+        
+        /*
+            Problemas con el Resultado
+        ----Path de la funcion editar---
+        */
         environment = new net.sf.clipsrules.jni.Environment();
         try{
             
@@ -80,170 +104,406 @@ public class ControladorGeneral {
     
             environment.reset();
             
-            if (pre1.p1rb1.isSelected()){System.out.println("A");}
-        else if (pre1.p1rb2.isSelected()){System.out.println("B");}
-        else if (pre1.p1rb3.isSelected()){System.out.println("C");}
-        else if (pre1.p1rb4.isSelected()){System.out.println("D");}
-        
-        if (pre2.p2rb1.isSelected()){System.out.println("A");}
-        else if (pre2.p2rb2.isSelected()){System.out.println("B");}
-        else if (pre2.p2rb3.isSelected()){System.out.println("C");}
-        else if (pre2.p2rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre3.p3rb1.isSelected()){System.out.println("A");}
-        else if (pre3.p3rb2.isSelected()){System.out.println("B");}
-        else if (pre3.p3rb3.isSelected()){System.out.println("C");}
-        else if (pre3.p3rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre4.p4rb1.isSelected()){System.out.println("A");}
-        else if (pre4.p4rb2.isSelected()){System.out.println("B");}
-        else if (pre4.p4rb3.isSelected()){System.out.println("C");}
-        else if (pre4.p4rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre5.p5rb1.isSelected()){System.out.println("A");}
-        else if (pre5.p5rb2.isSelected()){System.out.println("B");}
-        else if (pre5.p5rb3.isSelected()){System.out.println("C");}
-        else if (pre5.p5rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre6.p6rb1.isSelected()){System.out.println("A");}
-        else if (pre6.p6rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre7.p7rb1.isSelected()){System.out.println("A");}
-        else if (pre7.p7rb2.isSelected()){System.out.println("B");}
-        else if (pre7.p7rb3.isSelected()){System.out.println("C");}
-        else if (pre7.p7rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre8.p8rb1.isSelected()){System.out.println("A");}
-        else if (pre8.p8rb2.isSelected()){System.out.println("B");}
-        else if (pre8.p8rb3.isSelected()){System.out.println("C");}
-        else if (pre8.p8rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre9.p9rb1.isSelected()){System.out.println("A");}
-        else if (pre9.p9rb2.isSelected()){System.out.println("B");}
-        else if (pre9.p9rb3.isSelected()){System.out.println("C");}
-        else if (pre9.p9rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre10.p10rb1.isSelected()){System.out.println("A");}
-        else if (pre10.p10rb2.isSelected()){System.out.println("B");}
-        else if (pre10.p10rb3.isSelected()){System.out.println("C");}
-        else if (pre10.p10rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre11.p11rb1.isSelected()){System.out.println("A");}
-        else if (pre11.p11rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre12.p12rb1.isSelected()){System.out.println("A");}
-        else if (pre12.p12rb2.isSelected()){System.out.println("B");}
-        else if (pre12.p12rb3.isSelected()){System.out.println("C");}
-        else if (pre12.p12rb4.isSelected()){System.out.println("D");}
-        
-        
-        if (pre13.p13rb1.isSelected()){System.out.println("A");}
-        else if (pre13.p13rb2.isSelected()){System.out.println("B");}
-        else if (pre13.p13rb3.isSelected()){System.out.println("C");}
-        else if (pre13.p13rb4.isSelected()){System.out.println("D");}
-        
-        if (pre14.p14rb1.isSelected()){System.out.println("A");}
-        else if (pre14.p14rb2.isSelected()){System.out.println("B");}
-        else if (pre14.p14rb3.isSelected()){System.out.println("C");}
-        else if (pre14.p14rb4.isSelected()){System.out.println("D");}
-        
-        if (pre15.p15rb1.isSelected()){System.out.println("A");}
-        else if (pre15.p15rb2.isSelected()){System.out.println("B");}
-        else if (pre15.p15rb3.isSelected()){System.out.println("C");}
-        else if (pre15.p15rb4.isSelected()){System.out.println("D");}
-        
-        if (pre16.p16rb1.isSelected()){System.out.println("A");}
-        else if (pre16.p16rb2.isSelected()){System.out.println("B");}
-        else if (pre16.p16rb3.isSelected()){System.out.println("C");}
-        else if (pre16.p16rb4.isSelected()){System.out.println("D");}
-        
-        if (pre17.p17rb1.isSelected()){System.out.println("A");}
-        else if (pre17.p17rb2.isSelected()){System.out.println("B");}
-        else if (pre17.p17rb3.isSelected()){System.out.println("C");}
-        else if (pre17.p17rb4.isSelected()){System.out.println("D");}
-        
-        if (pre18.p18rb1.isSelected()){System.out.println("A");}
-        else if (pre18.p18rb2.isSelected()){System.out.println("B");}
-        else if (pre18.p18rb3.isSelected()){System.out.println("C");}
-        else if (pre18.p18rb4.isSelected()){System.out.println("D");}
-        
-        if (pre19.p19rb1.isSelected()){System.out.println("A");}
-        else if (pre19.p19rb2.isSelected()){System.out.println("B");}
-        else if (pre19.p19rb3.isSelected()){System.out.println("C");}
-        
-        if (pre20.p20rb1.isSelected()){System.out.println("A");}
-        else if (pre20.p20rb2.isSelected()){System.out.println("B");}
-        else if (pre20.p20rb3.isSelected()){System.out.println("C");}
-        else if (pre20.p20rb4.isSelected()){System.out.println("D");}
-        
-        if (pre21.p21rb1.isSelected()){System.out.println("A");}
-        else if (pre21.p21rb2.isSelected()){System.out.println("B");}
-        else if (pre21.p21rb3.isSelected()){System.out.println("C");}
-        else if (pre21.p21rb4.isSelected()){System.out.println("D");}
-        
-        if (pre22.p22rb1.isSelected()){System.out.println("A");}
-        else if (pre22.p22rb2.isSelected()){System.out.println("B");}
-        else if (pre22.p22rb3.isSelected()){System.out.println("C");}
-        else if (pre22.p22rb4.isSelected()){System.out.println("D");}
-        
-        if (pre23.p23rb1.isSelected()){System.out.println("A");}
-        else if (pre23.p23rb2.isSelected()){System.out.println("B");}
-        else if (pre23.p23rb3.isSelected()){System.out.println("C");}
-        
-        if (pre24.p24rb1.isSelected()){System.out.println("A");}
-        else if (pre24.p24rb2.isSelected()){System.out.println("B");}
-        else if (pre24.p24rb3.isSelected()){System.out.println("C");}
-        
-        if (pre25.p25rb1.isSelected()){System.out.println("A");}
-        else if (pre25.p25rb2.isSelected()){System.out.println("B");}
-        else if (pre25.p25rb3.isSelected()){System.out.println("C");}
-        else if (pre25.p25rb4.isSelected()){System.out.println("D");}
-            
-            
-            
-            
-            String comandoAssert = "(assert (persona (codigo 1)(nombre \"Juan\")(apellido \"Loja\")(peso 23.3) (genero F)))";
-            
-            environment.eval(comandoAssert);
-            String busqueda = "(find-all-facts ((?f persona)) TRUE)";
-            net.sf.clipsrules.jni.MultifieldValue mv = (net.sf.clipsrules.jni.MultifieldValue) 
-            environment.eval(busqueda);
-           if (mv.size()>0){
-                //busqueda = "(find-fact ((?f persona)) (eq ?f:edad 23))";
-                mv = (net.sf.clipsrules.jni.MultifieldValue) environment.eval(busqueda);
-                
-                if(mv.size()>0){
-                    net.sf.clipsrules.jni.FactAddressValue fv = (net.sf.clipsrules.jni.FactAddressValue) mv.get(0);
-                    
-                    String nombres = fv.getSlotValue("nombre").toString();
-                    //System.out.println("La persona mayor a 18 aÃ±os se llama ["+nombres+"]");
-                    //System.out.println("Edad: ["+fv.getSlotValue("edad")+"]");
-                    
-                    System.out.println("Tipo Nombres: " + fv.getSlotValue("nombre").getCLIPSType());
-                    
-                    //System.out.println("Tipo Edad: " + fv.getSlotValue("edad").getCLIPSType());              
-                    System.out.println("C"+nombres);
-                    //t.txtnom.setText(nombres);
-                    //System.out.println("J"+nombreS);
-                    JOptionPane.showMessageDialog(null, nombres);
-                }
+            if (pre1.p1rb1.isSelected()){
+                System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 1)(valor 1)))");
             }
+            else if (pre1.p1rb2.isSelected()){
+                System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 1)(valor 2)))");
+            }
+            else if (pre1.p1rb3.isSelected()){
+                System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 1)(valor 3)))");
+            }
+            else if (pre1.p1rb4.isSelected()){
+                System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 1)(valor 4)))");
+            }
+            if (pre2.p2rb1.isSelected()){
+                System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 2)(valor 1)))");
+            }
+            else if (pre2.p2rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 2)(valor 2)))");
+            }
+            else if (pre2.p2rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 2)(valor 3)))");
+            }
+            else if (pre2.p2rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 2)(valor 4)))");
+            }
+            if (pre3.p3rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 3)(valor 1)))");
+            }
+            else if (pre3.p3rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 3)(valor 2)))");
+            }
+            else if (pre3.p3rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 3)(valor 3)))");
+            }
+            else if (pre3.p3rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 3)(valor 4)))");
+            }
+            if (pre4.p4rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 4)(valor 1)))");
+            }
+            else if (pre4.p4rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 4)(valor 2)))");
+            }
+            else if (pre4.p4rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 4)(valor 3)))");
+            }
+            else if (pre4.p4rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 4)(valor 4)))");
+            }
+            if (pre5.p5rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 5)(valor 1)))");
+            }
+            else if (pre5.p5rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 5)(valor 2)))");
+            }
+            else if (pre5.p5rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 5)(valor 3)))");
+            }
+            else if (pre5.p5rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 5)(valor 4)))");
+            }
+            if (pre6.p6rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 6)(valor 1)))");
+            }
+            else if (pre6.p6rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 6)(valor 4)))");
+            }
+            if (pre7.p7rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 7)(valor 1)))");
+            }
+            else if (pre7.p7rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 7)(valor 2)))");
+            }
+            else if (pre7.p7rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 7)(valor 3)))");
+            }
+            else if (pre7.p7rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 7)(valor 4)))");
+            }
+            if (pre8.p8rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 8)(valor 1)))");
+            }
+            else if (pre8.p8rb2.isSelected()){System.out.println("B");
+                 environment.eval("(assert (respuestas (pregunta 8)(valor 2)))");
+            }
+            else if (pre8.p8rb3.isSelected()){System.out.println("C");
+                 environment.eval("(assert (respuestas (pregunta 8)(valor 3)))");
+            }
+            else if (pre8.p8rb4.isSelected()){System.out.println("D");
+                 environment.eval("(assert (respuestas (pregunta 8)(valor 4)))");
+            }
+            if (pre9.p9rb1.isSelected()){System.out.println("A");
+                 environment.eval("(assert (respuestas (pregunta 9)(valor 1)))");
+            }
+            else if (pre9.p9rb2.isSelected()){System.out.println("B");
+                 environment.eval("(assert (respuestas (pregunta 9)(valor 2)))");
+            }
+            else if (pre9.p9rb3.isSelected()){System.out.println("C");
+                 environment.eval("(assert (respuestas (pregunta 9)(valor 3)))");
+            }
+            else if (pre9.p9rb4.isSelected()){System.out.println("D");
+                 environment.eval("(assert (respuestas (pregunta 9)(valor 4)))");
+            }
+            if (pre10.p10rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 10)(valor 1)))");
+            }
+            else if (pre10.p10rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 10)(valor 2)))");
+            }
+            else if (pre10.p10rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 10)(valor 3)))");
+            }
+            else if (pre10.p10rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 10)(valor 4)))");
+            }
+            if (pre11.p11rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 11)(valor 1)))");
+            }
+            else if (pre11.p11rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 11)(valor 4)))");
+            }
+            if (pre12.p12rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 12)(valor 1)))");
+            }
+            else if (pre12.p12rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 12)(valor 2)))");
+            }
+            else if (pre12.p12rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 12)(valor 3)))");
+            }
+            else if (pre12.p12rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 12)(valor 4)))");
+            }
+            if (pre13.p13rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 13)(valor 1)))");
+            }
+            else if (pre13.p13rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 13)(valor 2)))");
+            }
+            else if (pre13.p13rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 13)(valor 3)))");
+            }
+            else if (pre13.p13rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 13)(valor 4)))");
+            }
+            if (pre14.p14rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 14)(valor 1)))");
+            }
+            else if (pre14.p14rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 14)(valor 2)))");
+            }
+            else if (pre14.p14rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 14)(valor 3)))");
+            }
+            else if (pre14.p14rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 14)(valor 4)))");
+            }
+            if (pre15.p15rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 15)(valor 1)))");
+            }
+            else if (pre15.p15rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 15)(valor 2)))");
+            }
+            else if (pre15.p15rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 15)(valor 3)))");
+            }
+            else if (pre15.p15rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 15)(valor 4)))");
+            }
+            if (pre16.p16rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 16)(valor 1)))");
+            }
+            else if (pre16.p16rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 16)(valor 2)))");
+            }
+            else if (pre16.p16rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 16)(valor 3)))");
+            }
+            else if (pre16.p16rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 16)(valor 4)))");
+            }
+            if (pre17.p17rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 17)(valor 1)))");
+            }
+            else if (pre17.p17rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 17)(valor 2)))");
+            }
+            else if (pre17.p17rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 17)(valor 3)))");
+            }
+            else if (pre17.p17rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 17)(valor 4)))");
+            }
+            if (pre18.p18rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 18)(valor 1)))");
+            }
+            else if (pre18.p18rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 18)(valor 2)))");
+            }
+            else if (pre18.p18rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 18)(valor 3)))");
+            }
+            else if (pre18.p18rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 18)(valor 4)))");
+            }
+            if (pre19.p19rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 19)(valor 1)))");
+            }
+            else if (pre19.p19rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 19)(valor 2)))");
+            }
+            else if (pre19.p19rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 19)(valor 3)))");
+            }
+            if (pre20.p20rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 20)(valor 1)))");
+            }
+            else if (pre20.p20rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 20)(valor 2)))");
+            }
+            else if (pre20.p20rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 20)(valor 3)))");
+            }
+            else if (pre20.p20rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 20)(valor 4)))");
+            }
+            if (pre21.p21rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 21)(valor 1)))");
+            }
+            else if (pre21.p21rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 21)(valor 2)))");
+            }
+            else if (pre21.p21rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 21)(valor 3)))");
+            }
+            else if (pre21.p21rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 21)(valor 4)))");
+            }
+            if (pre22.p22rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 22)(valor 1)))");
+            }
+            else if (pre22.p22rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 22)(valor 2)))");
+            }
+            else if (pre22.p22rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 22)(valor 3)))");
+            }
+            else if (pre22.p22rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 22)(valor 4)))");
+            }
+            if (pre23.p23rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 23)(valor 1)))");
+            }
+            else if (pre23.p23rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 23)(valor 2)))");
+            }
+            else if (pre23.p23rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 23)(valor 3)))");
+            }
+            if (pre24.p24rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 24)(valor 1)))");
+            }
+            else if (pre24.p24rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 24)(valor 2)))");
+            }
+            else if (pre24.p24rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 24)(valor 3)))");
+            }
+            if (pre25.p25rb1.isSelected()){System.out.println("A");
+                environment.eval("(assert (respuestas (pregunta 25)(valor 1)))");
+            }
+            else if (pre25.p25rb2.isSelected()){System.out.println("B");
+                environment.eval("(assert (respuestas (pregunta 25)(valor 2)))");
+            }
+            else if (pre25.p25rb3.isSelected()){System.out.println("C");
+                environment.eval("(assert (respuestas (pregunta 25)(valor 3)))");
+            }
+            else if (pre25.p25rb4.isSelected()){System.out.println("D");
+                environment.eval("(assert (respuestas (pregunta 25)(valor 4)))");
+            }
+            
+            
+            environment.run();
+            environment.eval("(resultado ?*valorA* ?*valorB* ?*valorC* ?*valorD* )");
            
+            
+            leerResultado();
             
         }catch(Exception e){
             System.out.println("Error no conectada");
             e.printStackTrace();
         }
+    }
+    
+    public void leerResultado(){
+      File archivo = null;
+      FileReader fr = null;
+      BufferedReader br = null;
+      String resultado = "";
+      try {
+         // Apertura del fichero y creacion de BufferedReader para poder
+         // hacer una lectura comoda (disponer del metodo readLine()).
+         archivo = new File ("resultado.txt");
+         fr = new FileReader (archivo);
+         br = new BufferedReader(fr);
+         // Lectura del fichero
+         String linea;
+         while((linea=br.readLine())!=null){
+            resultado = linea;
+         }
+      }
+      catch(Exception e){
+         e.printStackTrace();
+      }finally{
+         try{                    
+            if( null != fr ){   
+               fr.close();     
+            }                  
+         }catch (Exception e2){ 
+            e2.printStackTrace();
+         }
+      }
+        String [] partes = resultado.split(";");
+        resultadoA=Integer.parseInt(partes[0]);
+        resultadoB=Integer.parseInt(partes[1]);
+        resultadoC=Integer.parseInt(partes[2]);
+        resultadoD=Integer.parseInt(partes[3]);
+        calcularMayor();
+       // System.out.println("A: "+ resultadoA +"B: "+resultadoB+ "C:"+resultadoC +"D:" +resultadoD);  
+    }
+    public void calcularMayor(){
+        if (resultadoA>=resultadoB && resultadoA>=resultadoC && resultadoA>=resultadoD){
+            cardioVascular="RiesgoBajo";
+            mostrar="El riesgo de infarto es... Bajo. ¡Enhorabuena! Llevas una vida saludable \n"
+                    + "y se nota que proteges tu corazón. Nuestro consejo es que sigas con los buenos \n"
+                    + "hábitos, tal y como vienes haciendo hasta ahora.";
+        }
+        else if(resultadoB>=resultadoA && resultadoB>=resultadoC && resultadoB>=resultadoD){
+            cardioVascular="RiesgoMedio";
+            mostrar="El riesgo de infarto es... Medio. Felicidades: estás dentro de los márgenes de la normalidad.\n"
+                    + " Pero si te propusieras llevar un estilo de vida más cardiosaludable, ayudarías a reducir \n"
+                    + "cualquier riesgo de enfermedad coronaria.";
+        }
+        else if(resultadoC>=resultadoA && resultadoC>=resultadoB && resultadoC>=resultadoD){
+            cardioVascular="RiesgoElevado";
+            mostrar="El riesgo de infarto es... Elevado. Puedes sufrir alguna dolencia cardiovascular.\n"
+                    + " Nuestro consejo es que te tomes en serio las recomendaciones sobre alimentación y ejercicio físico. \n"
+                    + "Consulta al médico si tienes dudas.";
+        }
+        else if(resultadoD>=resultadoA && resultadoD>=resultadoB && resultadoD>=resultadoC){
+            cardioVascular="RiesgoAlto";
+            mostrar="El riesgo de infarto es... Muy alto. Lo sentimos, pero tienes muchas probabilidades \n"
+                    + "de padecer una enfermedad cardiovascular. No sólo deberías llevar un estilo de vida saludable, \n"
+                    + "sino que estaría bien que acudieras a un médico...";
+        }
+         crearHecho();
+    }
+    
+    public void crearHecho(){
+        String nombreClass []= nombre.split(" ");
+        try {
+            environment.eval("(make-instance "+nombreClass[0]+" of persona "+"(nombre "+nombre+") "
+                    +"(apellido "+apellido+") "+"(peso "+peso+") "
+                            +"(genero "+genero+")"+"(cardiovascular "+cardioVascular+"))");
+            environment.run();
+            environment.reset();
+        } catch (CLIPSException ex) {
+            Logger.getLogger(ControladorGeneral.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        FileWriter fichero = null;
+        PrintWriter pw = null;
+            try
+            {
+               fichero = new FileWriter("hechos.txt",true);
+               pw = new PrintWriter(fichero);
+               String hecho = "(make-instance "+nombreClass[0]+" of persona "+"(nombre "+nombre+") "
+                    +"(apellido "+apellido+") "+"(peso "+peso+") "
+                            +"(genero "+genero+")"+"(cardiovascular "+cardioVascular+"))\n";
+               pw.println(hecho);
+
+            } catch (Exception e) {
+               e.printStackTrace();
+            } finally {
+              try {
+              if (null != fichero)
+                 fichero.close();
+              } catch (Exception e2) {
+                 e2.printStackTrace();
+              }
+           }
+            
+            Resultado resul=new Resultado();
+            resul.lblNomR.setText(nombre);
+            resul.txtR.setText(mostrar);
+            resul.setVisible(true);
+    
     }
     /**
      * Metodo que permite agregar un componenete hijo a un componente padre 
