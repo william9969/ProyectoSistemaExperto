@@ -1,0 +1,16 @@
+(make-instance William of persona (nombre William Ramiro) (apellido Sinchi Morocho) (peso 54.0) (genero M)(cardiovascular RiesgoBajo))
+
+(make-instance Jessica of persona (nombre Jessica) (apellido Maribel Guncay) (peso 43.0) (genero )(cardiovascular RiesgoAlto))
+
+(make-instance Efren of persona (nombre Efren Ramiro   ) (apellido Gordillo Marquez) (peso 67.0) (genero M)(cardiovascular RiesgoElevado))
+
+(make-instance Nat of persona (nombre Nat Omar) (apellido Alvarez) (peso 23.0) (genero M)(cardiovascular RiesgoElevado))
+
+(make-instance Maria of persona (nombre Maria Angel) (apellido Chica Chica) (peso 65.0) (genero )(cardiovascular RiesgoMedio))
+
+(make-instance Paola of persona (nombre Paola Valeria) (apellido Guncay Guncay) (peso 45.0) (genero F)(cardiovascular RiesgoBajo))
+
+(make-instance Anabel of persona (nombre Anabel Ana) (apellido Armijos Andrade) (peso 76.0) (genero )(cardiovascular RiesgoMedio))
+
+
+

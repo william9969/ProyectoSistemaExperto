@@ -5,6 +5,7 @@
  */
 package Interfaz;
 
+import Controlador.ControladorGeneral;
 import java.awt.Panel;
 import java.awt.event.*;
 import javax.swing.*;
@@ -15,6 +16,7 @@ import javax.swing.*;
  */
 public class Test extends javax.swing.JFrame implements ActionListener{
     //this.Test = Test();
+    ControladorGeneral controlador;
     public int cont=1;
     private final Pregunta1 pre1;
     private final Pregunta2 pre2;
@@ -818,7 +820,7 @@ public class Test extends javax.swing.JFrame implements ActionListener{
         rbHombre = new javax.swing.JRadioButton();
         txtnom = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtPeso = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         txtape = new javax.swing.JTextField();
         contenedor = new javax.swing.JPanel();
@@ -884,7 +886,7 @@ public class Test extends javax.swing.JFrame implements ActionListener{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         txtpesLayout.setVerticalGroup(
@@ -897,7 +899,7 @@ public class Test extends javax.swing.JFrame implements ActionListener{
                         .addComponent(txtnom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(txtpesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
                         .addComponent(txtape, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -966,7 +968,19 @@ public class Test extends javax.swing.JFrame implements ActionListener{
     }//GEN-LAST:event_btnsigActionPerformed
 
     private void btnantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnantActionPerformed
-        resultado();
+        controlador = new ControladorGeneral();
+        String genero ="";
+        if (rbHombre.isSelected()){
+            genero="M";
+        }
+        else if(rbMujer.isSelected()){
+            genero="F";
+        }
+        
+        
+        controlador.objeto(pre1, pre2, pre3, pre4, pre5, pre6, pre7, pre8, pre9, pre10, pre11, pre12, pre13, pre14, pre15, pre16, pre17, pre18, pre19, pre20, pre21, pre22, pre23, pre24, pre25, txtnom.getText(),txtape.getText(),Float.parseFloat(txtPeso.getText()),genero);
+        
+        this.setVisible(false);
     }//GEN-LAST:event_btnantActionPerformed
 
     
@@ -1147,9 +1161,9 @@ public class Test extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JRadioButton rbHombre;
     private javax.swing.JRadioButton rbMujer;
+    private javax.swing.JTextField txtPeso;
     private javax.swing.JTextField txtape;
     private javax.swing.JTextField txtnom;
     private javax.swing.JPanel txtpes;
